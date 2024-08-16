@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>シンプルなブログ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #852;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+        article {
+            margin-bottom: 20px;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        #profile {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>みわの日記</h1>
+        <nav>
+            <ul>
+                <li><a href="#">ホーム</a></li>
+                <li><a href="#">アーカイブ</a></li>
+                <li><a href="#" id="profile-link">プロフィール</a></li>
+                <li><a href="#">お問い合わせ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <article>
+            <h2>秋茄子は嫁に食わすな</h2>
+            <p>私のお尻は茄子に似ている。秋の茄子は美味しい。</p>
+        </article>
+
+        <article>
+            <h2>クワイエット・ギャンブル 2</h2>
+            <p>鴨が泣く。</p>
+        </article>
+
+        <div id="profile">
+            <h2>プロフィール</h2>
+            <p>みわたん</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 みわの日記</p>
+    </footer>
+
+    <script>
+        document.getElementById('profile-link').addEventListener('click', function(event) {
+            event.preventDefault(); // リンクのデフォルトの動作をキャンセル
+            var profileSection = document.getElementById('profile');
+            profileSection.style.display = profileSection.style.display === 'none' ? 'block' : 'none';
+        });
+    </script>
+</body>
+</html>
